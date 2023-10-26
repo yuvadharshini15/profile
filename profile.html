@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YUVADHARSHINI - Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0c0808;
+        }
+
+        header {
+            background-color: #333435;
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative; 
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+        }
+
+        .profile-picture {
+            width: 200px; 
+            height: 200px;
+            border-radius: 200%; 
+            object-fit: cover; 
+            position: absolute;
+            top: 9px; 
+            left: 75px; 
+        }
+
+        nav {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .section-content {
+            background-color: #fff;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+        .download-button {
+            background-color: #333;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+            align-self: center;
+        }
+
+        .download-button:hover {
+            background-color: #555;
+        }
+        #parentDIV {
+  position: relative;
+  height:30px;
+  width: 100%;
+  background-color:#FFFFFF;
+  border: solid black 1px;
+}
+
+#myDIV {
+  position: absolute;
+  background-color:lightblue;
+  height: 10%;
+  inset-inline: 10px 0px;
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  20% {inset-inline: 40px 10px;}
+}
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="c:/mypic/mypic.jpg" alt="Your Profile Picture" class="profile-picture">
+            <h1>YUVADHARSHINI L</h1>
+            <p>STUDENT</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>To place my career in a reputed organization where i can apply my technical skills and grow professionally , thereby contributing to the growth of the organization. </p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p></p>
+            <p>Alagappa University</p>
+            <p>Velumanoharan arts & science college for women - (Bsc.ComputerScience)</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul type="bullet">
+                <li>php</li>
+                <li>Html</li>
+                <li>python</li>
+                <li>Digital marketing</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">A Simple game</a></li>
+                <li><a href="#">Asimple website/Blog</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+    
+        <div class="section-content">
+            <center>
+            <h2>Resume</h2>
+            <a href="https://drive.google.com/file/d/1dLY51u15Z9NdjL-6aM5mBidCNSOo2ftJ/view?usp=share_link" target="_blank" class="download-button">Download CV</a>
+        </center>
+        </div>
+        
+    </section>
+    <div id="parentDIV">
+        <div id="myDIV">
+    <footer>
+        <p>&copy; 2023 YUVADHARSHINI L</p>
+    </footer>
+    </div></div>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
